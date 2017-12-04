@@ -29,6 +29,14 @@ require "csv"
      end
    end
 
+   def iterative_search(name)
+     @entries.each do |entry|
+       if entry.name == name
+         return entry
+       end
+     end
+   end
+
    def binary_search(name)
 
      lower = 0
