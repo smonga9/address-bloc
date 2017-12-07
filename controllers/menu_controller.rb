@@ -16,6 +16,7 @@ require_relative '../models/address_book'
      puts "4 - Search for an entry"
      puts "5 - Import entries from a CSV"
      puts "6 - Exit"
+     puts "7 - Nuke all entries"
      print "Enter your selection: "
 
      # #3
@@ -45,6 +46,11 @@ require_relative '../models/address_book'
        when 6
          puts "Good-bye!"
          exit(0)
+       when 7
+         system "clear"
+         @address_book.nuke
+         puts "All entries deleted!"
+         main_menu
        # #9
        else
          system "clear"
